@@ -1025,7 +1025,8 @@ namespace LogicReinc.BlendFarm.Windows
         {
             SaveFileDialog dialog = new SaveFileDialog()
             {
-                Title = title
+                Title = title,
+                Directory = Path.GetDirectoryName(CurrentProject.BlendFile)
             };
             dialog.InitialFileName = initialName;
 
