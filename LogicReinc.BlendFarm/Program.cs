@@ -52,8 +52,6 @@ namespace LogicReinc.BlendFarm
         {
             AppBuilder builder = AppBuilder.Configure<App>()
                 .UsePlatformDetect();
-            if (SystemInfo.IsOS(SystemInfo.OS_LINUX64))
-                builder = Avalonia.Dialogs.ManagedFileDialogExtensions.UseManagedSystemDialogs(builder);
             return builder.LogToDebug();
         }
     }
